@@ -1,0 +1,28 @@
+{
+  "name": "simply-menu",
+  "productName": "simply menu",
+  "version": "1.0.0",
+  "description": "A simple menu bar application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "build"
+  },
+  "devDependencies": {
+    "@electron-forge/plugin-fuses": "^7.2.0",
+    "@electron/fuses": "^1.7.0"
+  },
+  "keywords": [],
+  "author": "lawsonhiggins",
+  "license": "MIT",
+  "devDependencies":{
+    "electron": "^33.2.1",
+    "electron-builder": "17.3.1"
+  },
+  "dependencies": {
+    "menubar": "^9.5.1"
+  },
+  "build": {
+    "appId": "com.lawsonhiggins.simply-menu"
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script> -->
+
+    <title>Open App</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <button class="alarmPage">⏰ Alarm</button>
+      <button class="commandsPage">🖥️ Commands</button>
+      <button class="calculatorPage">🧮 Calculator</button>
+    </div>
+
+    <div class="main">
+      <div class="commands page">
+        <div class="inputs">
+          <input type="text" id="appName" placeholder="Enter Command:" />
+        </div>
+        <pre id="response"></pre>
+      </div>
+
+      <div class="alarm page">
+        <div class="time-left">
+          <h1 class="timeTxt">00:00:00</h1>
+        </div>
+        <div class="time-input">
+          <input type="text" maxlength="3" placeholder="00" class="hours" />
+          <p>:</p>
+          <input type="text" maxlength="3" placeholder="00" class="minutes" />
+          <p>:</p>
+          <input type="text" maxlength="3" placeholder="00" class="seconds" />
+        </div>
+      </div>
+
+      <div class="calculator page">
+        <div class="container">
+          <div class="display">
+            <p class="calculatorDisplay"></p>
+          </div>
+          <div class="buttons">
+            <button class="num" onclick=enterNumber(1)>1</button>
+            <button class="num" onclick=enterNumber(2)>2</button>
+            <button class="num" onclick=enterNumber(3)>3</button>
+            <button class="num" onclick='enterNumber("+")'>+</button>
+            <button class="num" onclick=enterNumber(4)>4</button>
+            <button class="num" onclick=enterNumber(5)>5</button>
+            <button class="num" onclick=enterNumber(6)>6</button>
+            <button class="num" onclick='enterNumber("-")'>-</button>
+            <button class="num" onclick=enterNumber(7)>7</button>
+            <button class="num" onclick=enterNumber(8)>8</button>
+            <button class="num" onclick=enterNumber(9)>9</button>
+            <button class="num" onclick='enterNumber("*")'>*</button>
+            <button class="num" onclick=enterNumber(0)>0</button>
+            <button class="num" onclick=clearEquation()>C</button>
+            <button class="num" onclick=solve()>=</button>
+            <button class="num" onclick='enterNumber("/")'>/</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+      <button id="start-pause">⏯️</button>
+      <button id="stop">⏹️</button>
+      <button id="reset">🔄</button>
+      <button id="exit">❌</button>
+    </div>
+
+    <script src="command.js"></script>
+    <script src="alarm.js"></script>
+    <script src="main.js"></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
